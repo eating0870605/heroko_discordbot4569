@@ -34,5 +34,11 @@ async def on_message(message):
             remessage = translator.translate(content, dest='zh-tw').text
             await message.reply(remessage) 
 
+client.on('message',msg=>{
+    if(msg.content.startsWith(settings.prefix+'我的小寶貝')){
+        msg.channel.send('YaYaYa!') ;
+        }
+}) ;
+            
 # Bot起動
 client.run(TOKEN)
